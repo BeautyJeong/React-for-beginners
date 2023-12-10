@@ -10,19 +10,18 @@
 
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script> <!--인터렉티브한 UI -->
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> <!-- HTML로 만들어줌 -->
-<script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
     const root = document.getElementById("root");
-    const h3 = React.createElement("h3", {
-        id: "title",
-        onMouseEnter: () => console.log("mouse enter"),
-    }, "Hello I'm a span");
-    const btn = React.createElement("button", {
-        onClick: () => console.log("I'm clicked"),
-        style: {
-            backgroundColor: "tomato",
-        }
-    }, "Click me");
-    const container = React.createElement("div", null, [h3, btn]);
+
+    const Title = (
+        <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>Hello I'm a title</h3>
+    );
+    const Button = (
+        <button style={{backgroundColor: "tomato",}} onClick={() => console.log("I'm clicked")}>Click me</button>
+    );
+
+    const container = React.createElement("div", null, [Title, Button]);
     ReactDOM.render(container, root);
 </script>
 </html>
