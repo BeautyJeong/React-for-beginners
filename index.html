@@ -17,7 +17,16 @@
     function App () {
         const [counter, setCounter] = React.useState(0);
         const onClick = () => {
+            //값으로 넣을 때, 한 번만 실행됨
             // setCounter(counter + 1);
+            // setCounter(counter + 1);
+            // setCounter(counter + 1);
+            // setCounter(counter + 1);
+
+            //함수로 넣을 때, setCounter가 호출된 만큼 증가
+            setCounter((current) => current + 1);
+            setCounter((current) => current + 1);
+            setCounter((current) => current + 1);
             setCounter((current) => current + 1);
         }
         console.log("rendered");
