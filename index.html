@@ -15,27 +15,13 @@
     const root = document.getElementById("root");
 
     function App () {
-        const [counter, setCounter] = React.useState(0);
-        const onClick = () => {
-            //값으로 넣을 때, 한 번만 실행됨
-            // setCounter(counter + 1);
-            // setCounter(counter + 1);
-            // setCounter(counter + 1);
-            // setCounter(counter + 1);
-
-            //함수로 넣을 때, setCounter가 호출된 만큼 증가
-            setCounter((current) => current + 1);
-            setCounter((current) => current + 1);
-            setCounter((current) => current + 1);
-            setCounter((current) => current + 1);
-        }
-        console.log("rendered");
-        console.log(counter);
-
         return (
             <div>
-                <h3>Total clicks: {counter}</h3>
-                <button onClick={onClick}>Click me</button>
+                <h1>Super Converter</h1>
+                <label for="minutes">Minutes</label>
+                <input id="minutes" placeholder="Minutes" type="number" />
+                <label for="hours">Hours</label>
+                <input id="hours" placeholder="Hours" type="number" />
             </div>
         );
     }
