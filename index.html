@@ -14,7 +14,8 @@
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> <!-- HTML로 만들어줌 -->
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel">
-  function SaveBtn() {
+  function Btn(props) {
+    console.log(props);
     return (
       <button
         style={{
@@ -24,22 +25,7 @@
           borderRadius: 10,
           border: 0,
         }}>
-        Save Changes
-      </button>
-    );
-  }
-
-  function ConfirmBtn() {
-    return (
-      <button
-        style={{
-          backgroundColor: "tomato",
-          color: "white",
-          padding: "10px 20px",
-          borderRadius: 10,
-          border: 0,
-        }}>
-        Confirm
+        {props.banana}
       </button>
     );
   }
@@ -47,8 +33,8 @@
   function App() {
     return (
       <div>
-        <SaveBtn />
-        <ConfirmBtn />
+        <Btn banana="Save Changes" x={false} />
+        <Btn banana="Continue" />
       </div>
     );
   }
