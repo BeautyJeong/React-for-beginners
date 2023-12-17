@@ -1,5 +1,5 @@
 # React-for-beginners
-- [ReactJS로 영화 웹 서비스 만들기](https://nomadcoders.co/react-for-beginners/lectures/3260) --> 노마드코더 리액트 입문 동영상 강의
+- 노마드 코더 강의 수강: [ReactJS로 영화 웹 서비스 만들기](https://nomadcoders.co/react-for-beginners)
 - [cdn](https://ko.legacy.reactjs.org/docs/cdn-links.html) 사용
   - react, reactdom을 import하는 script tag에서
 production은 배포 모드, development는 개발 모드를 의미
